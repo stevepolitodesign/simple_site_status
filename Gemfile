@@ -69,5 +69,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
+  gem "capybara_accessibility_audit", github: "thoughtbot/capybara_accessibility_audit"
   gem "selenium-webdriver"
 end

@@ -71,4 +71,5 @@ group :test do
   gem "capybara"
   gem "capybara_accessibility_audit", github: "thoughtbot/capybara_accessibility_audit"
   gem "selenium-webdriver"
+  gem "webmock"
 end

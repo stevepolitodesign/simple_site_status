@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "audits#new"
 
-  resources :audits, only: %i[new]
+  resources :audits, only: %i[new create show]
 end

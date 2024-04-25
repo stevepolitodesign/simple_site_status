@@ -1,0 +1,11 @@
+<% if @audit.url %>
+  <h1>Results for <%= @audit.url %></h1>
+<% else %>
+  <h1>Free Broken Link Checker</h1>
+<% end %>
+
+<%= form_with model: @audit, url: new_audit_path, method: :get do |form| %>
+  <%= form.label :url %>
+  <%= form.url_field :url, required: true %>
+  <%= form.submit "Audit Webpage" %>
+<% end %>

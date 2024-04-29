@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   root to: "audit/webpages#new"
 
   namespace :audit do
-    resources :webpage, only: %i[new]
+    resources :webpages, only: %i[new create show]
   end
 end

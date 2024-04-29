@@ -15,6 +15,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_29_093815) do
   enable_extension "plpgsql"
 
   create_table "webpages", force: :cascade do |t|
+    t.text "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

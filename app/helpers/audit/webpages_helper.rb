@@ -1,0 +1,2 @@
+module Audit::WebpagesHelper
+end

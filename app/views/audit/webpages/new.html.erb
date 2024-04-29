@@ -1,0 +1,7 @@
+<h1>Free Broken Link Checker</h1>
+
+<%= form_with model: @webpage do |form| %>
+  <%= form.label :url %>
+  <%= form.url_fiel :url, required: true %>
+  <%= form.submit %>
+<% end %>

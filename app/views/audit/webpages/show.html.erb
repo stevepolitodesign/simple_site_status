@@ -1,0 +1,20 @@
+<h1>Results for <%= @webpage.url %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Status</th>
+      <th scope="col">Link</th>
+      <th scope="col">Text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @webpage.links do |link| %>
+      <tr>
+        <td><%= link.status_code %></td>
+        <td><%= link.url %></td>
+        <td><%= link.text %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

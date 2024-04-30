@@ -15,7 +15,7 @@ class AuditStoriesTest < ApplicationSystemTestCase
 
     assert_selector "h1", text: "Results for https://example.com"
 
-    within_table "links" do
+    within_table do
       assert_text "404 https://404.com Broken Link"
     end
   end

@@ -1,6 +1,6 @@
 <h1>Results for <%= @webpage.url %></h1>
 
-<table>
+<table id=<%= dom_id @webpage, :links %>>
   <thead>
     <tr>
       <th scope="col">Status</th>
@@ -11,7 +11,7 @@
   <tbody>
     <% @webpage.links do |link| %>
       <tr>
-        <td><%= link.status_code %></td>
+        <td><%= link.status.code %></td>
         <td><%= link.url %></td>
         <td><%= link.text %></td>
       </tr>

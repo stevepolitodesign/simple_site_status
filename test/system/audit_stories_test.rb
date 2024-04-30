@@ -15,7 +15,7 @@ class AuditStoriesTest < ApplicationSystemTestCase
 
     assert_selector "h1", text: "Results for https://example.com"
 
-    within_table do
+    within_table ActionView::RecordIdentifier.dom_id(Webpage.last!, :links) do
       assert_text "404 https://404.com Broken Link"
     end
   end

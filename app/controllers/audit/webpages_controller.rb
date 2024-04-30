@@ -5,6 +5,7 @@ class Audit::WebpagesController < ApplicationController
 
   def create
     @webpage = Webpage.create(webpage_params)
+    Audit::Webpage::CreateJob.perform_now(@webpage)
 
     redirect_to audit_webpage_path(@webpage)
   end

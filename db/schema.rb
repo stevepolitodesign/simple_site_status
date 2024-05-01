@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_30_091815) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_01_094910) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,6 +31,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_30_091815) do
     t.index ["document_id"], name: "index_links_on_document_id", unique: true
   end
 
+  create_table "statuses", force: :cascade do |t|
+    t.integer "code"
+    t.bigint "link_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["link_id"], name: "index_statuses_on_link_id", unique: true
+  end
+
   create_table "webpages", force: :cascade do |t|
     t.text "url"
     t.datetime "created_at", null: false
@@ -39,4 +47,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_30_091815) do
 
   add_foreign_key "documents", "webpages"
   add_foreign_key "links", "documents"
+  add_foreign_key "statuses", "links"
 end

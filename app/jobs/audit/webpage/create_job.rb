@@ -14,7 +14,10 @@ class Audit::Webpage::CreateJob < ApplicationJob
       url = link.attributes["href"].value
       text = link.text
 
-      webpage.document.links.create!(url:, text:)
+      link = webpage.document.links.create!(url:, text:)
+
+      code = Net::HTTP.get_response(link.uri).code
+      link.create_status!(code:)
     end
   end
 end

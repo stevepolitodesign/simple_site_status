@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @webpage.links do |link| %>
+    <% @webpage.links.each do |link| %>
       <tr>
         <td><%= link.status.code %></td>
         <td><%= link.url %></td>
@@ -18,3 +18,4 @@
     <% end %>
   </tbody>
 </table>
+

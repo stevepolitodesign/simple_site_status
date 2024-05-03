@@ -1,6 +1,13 @@
 <h1>Free Broken Link Checker</h1>
 
 <%= form_with model: [:audit, @webpage] do |form| %>
+  <% if @webpage.errors.any? %>
+    <ul>
+    <% @webpage.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+    <ul>
+  <% end %>
   <%= form.label :url %>
   <%= form.url_field :url, required: true %>
   <%= form.submit "Audit Webpage" %>

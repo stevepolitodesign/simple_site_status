@@ -4,10 +4,15 @@ class Audit::WebpagesController < ApplicationController
   end
 
   def create
-    @webpage = Webpage.create(webpage_params)
-    Audit::Webpage::CreateJob.perform_now(@webpage)
+    @webpage = Webpage.new(webpage_params)
 
-    redirect_to audit_webpage_path(@webpage)
+    if @webpage.save
+      Audit::Webpage::CreateJob.perform_now(@webpage)
+
+      redirect_to audit_webpage_path(@webpage)
+    else
+      render :new, status: 422
+    end
   end
 
   def show

@@ -39,6 +39,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_01_094910) do
     t.index ["link_id"], name: "index_statuses_on_link_id", unique: true
   end
 
+  # TODO: PREVENT NULL VALUES
   create_table "webpages", force: :cascade do |t|
     t.text "url"
     t.datetime "created_at", null: false

@@ -8,6 +8,8 @@ class Audit::Webpage::CreateJob < ApplicationJob
     response = Net::HTTP.get(webpage.uri)
 
     webpage.create_document(body: response)
+
+    Link::CreateJob.perform_later(webpage.document)
     links = Nokogiri::HTML(webpage.document.body).css("a")
 
     links.each do |link|

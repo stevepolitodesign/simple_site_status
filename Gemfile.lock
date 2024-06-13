@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 7b6a01b437f46817aea5ad0e9cea4789e39e41df
+  revision: 16732072592410882f4c24362a556eabfad2b3f3
   branch: 7-1-stable
   specs:
     actioncable (7.1.3.4)
@@ -219,7 +219,7 @@ GEM
     puma (6.4.2)
       nio4r (~> 2.0)
     racc (1.8.0)
-    rack (3.0.11)
+    rack (3.1.3)
     rack-session (2.0.0)
       rack (>= 3.0.0)
     rack-test (2.1.0)
@@ -243,7 +243,7 @@ GEM
     redis-client (0.22.1)
       connection_pool
     regexp_parser (2.9.0)
-    reline (0.5.8)
+    reline (0.5.9)
       io-console (~> 0.5)
     rexml (3.2.8)
       strscan (>= 3.0.9)

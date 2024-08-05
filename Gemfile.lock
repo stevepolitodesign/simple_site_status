@@ -102,7 +102,7 @@ GIT
 
 GIT
   remote: https://github.com/thoughtbot/capybara_accessibility_audit.git
-  revision: ae7785f3523f43236efefed1189f16a30a0fcfbc
+  revision: 4e3837fad39f667de26b2ff5cdc839725b6a09ed
   specs:
     capybara_accessibility_audit (0.2.0)
       axe-core-api

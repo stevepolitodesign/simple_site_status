@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 9dc600184fc24c504dc11fc63871074e8f2d94e9
+  revision: cfa059b3538179602763f96d5a22e4ea42c26b4e
   branch: 7-1-stable
   specs:
     actioncable (7.1.3.4)
@@ -142,7 +142,7 @@ GEM
       xpath (~> 3.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    concurrent-ruby (1.3.3)
+    concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)

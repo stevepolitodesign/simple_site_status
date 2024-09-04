@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 2cb18ccd3af8adb8f7547dda4fdf9240ec451cd6
+  revision: 429040a7a33f749e508f5aa885b3b6d324dcde4f
   branch: 7-1-stable
   specs:
     actioncable (7.1.4)
@@ -296,7 +296,7 @@ GEM
       railties (>= 6.0.0)
     stringio (3.1.1)
     strscan (3.1.0)
-    thor (1.3.1)
+    thor (1.3.2)
     thread_safe (0.3.6)
     timeout (0.4.1)
     turbo-rails (2.0.6)
@@ -322,7 +322,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.17)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   aarch64-linux
